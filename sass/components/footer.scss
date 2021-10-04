@@ -1,0 +1,10 @@
+.footer-content {
+	@include sm-and-up {
+		display: flex;
+		gap: var(--space-md);
+		> * {
+			flex-grow: 1;
+			width: 100%;
+		}
+	}
+}

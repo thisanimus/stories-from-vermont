@@ -1,0 +1,128 @@
+[name='subscribe'] {
+	--control-height: 2rem;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	position: relative;
+	padding: 0.25rem;
+	display: flex;
+	border: var(--border-width) solid var(--color-ui-medium);
+	//background: var(--color-green-light);
+	animation-delay: 0.2s;
+	animation-duration: 0.125s;
+
+	&[data-state='subscribe'] {
+		.arrow,
+		.closing-message {
+			width: 0;
+		}
+	}
+	&[data-state='form'] {
+		animation-name: bumpRight;
+
+		#message-button {
+			width: 4em;
+		}
+		.opening-message,
+		.closing-message {
+			width: 0;
+		}
+	}
+	&[data-state='thank-you'] {
+		animation-name: bumpLeft;
+		.opening-message,
+		.arrow {
+			width: 0;
+		}
+	}
+
+	position: relative;
+	input,
+	button {
+		appearance: none;
+		background: none;
+		box-sizing: border-box;
+		display: block;
+		margin: 0;
+		padding: 0;
+		height: var(--control-height);
+		border: var(--border-width) solid var(--color-ui-medium);
+		transform: scale(1);
+		&:focus,
+		&:hover {
+			transform: scale(1);
+		}
+	}
+	button {
+		text-align: center;
+	}
+	label {
+		width: 100%;
+	}
+	input {
+		width: 100%;
+
+		padding: 0.5em;
+		border-radius: var(--border-radius);
+	}
+	.label {
+		line-height: 1;
+		padding: 0.6rem;
+	}
+	.mini-input {
+		display: flex;
+	}
+
+	#message-button {
+		border-radius: var(--border-radius);
+		background: var(--color-background);
+		font-weight: 800;
+		color: var(--color-text);
+		position: absolute;
+		right: 0.25rem;
+		top: 0.25rem;
+		z-index: 2;
+		width: calc(100% - 0.5rem);
+		height: var(--control-height);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: width 0.15s cubic-bezier(0.7, 0.25, 0.7, 1);
+
+		> * {
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+	.arrow {
+		font-weight: 400;
+		font-size: 2em;
+	}
+	.opening-message,
+	.closing-message {
+		font-weight: 800;
+	}
+
+	@keyframes bumpRight {
+		0% {
+			transform: translate3D(0, 0, 0);
+		}
+		50% {
+			transform: translate3D(0.5em, 0, 0);
+		}
+		100% {
+			transform: translate3D(0, 0, 0);
+		}
+	}
+
+	@keyframes bumpLeft {
+		0% {
+			transform: translate3D(0, 0, 0);
+		}
+		50% {
+			transform: translate3D(-0.5em, 0, 0);
+		}
+		100% {
+			transform: translate3D(0, 0, 0);
+		}
+	}
+}

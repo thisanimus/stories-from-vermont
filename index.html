@@ -1,0 +1,23 @@
+---
+layout: base.liquid
+title: Stories from Vermont
+description: These are stories from Vermont Some of them are true.
+---
+
+{% include vermont %}
+{% assign posts = collections.posts | sort "date" | reverse %}
+{% for post in posts %}
+
+	{% if post.data.type == 'post' %}
+
+		{% include tease/tease_post with post %}
+	{% endif %}
+
+	{% if post.data.type == 'quote' %}
+		{% include tease/tease_quote with post %}
+	{% endif %}
+
+	{% if post.data.type == 'gallery' %}
+		{% include tease/tease_gallery with post %}
+	{% endif %}
+{% endfor %}

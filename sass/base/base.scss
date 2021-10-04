@@ -1,0 +1,80 @@
+:root {
+	--color-ui-light: #eeeae5;
+	--color-ui-medium: #7b8083;
+	--color-ui-dark: #262c38;
+	--color-primary: #162f69;
+	--color-secondary: #ffb300;
+	--border-radius: 0.2rem;
+	--border-width: 2px;
+	--space-xs: 0.5rem;
+	--space-sm: 1rem;
+	--space-md: 2rem;
+	--space-lg: 4rem;
+	--space-xl: 8rem;
+	--breakpoint-sm: $breakpoint-sm;
+	--breakpoint-md: $breakpoint-md;
+	--breakpoint-lg: $breakpoint-lg;
+	--font-serif: 'Dana Library Hand', 'Georgia', 'Times New Roman', serif;
+	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+		sans-serif;
+
+	--color-teal: #66aca8;
+	--color-gold: #f0b848;
+	--color-green: #64887a;
+	--color-green-light: #a8c2a3;
+	--color-blush: #e07f67;
+	--color-blue: #607d9f;
+
+	--color-link-default: #1565c0;
+	--color-link-hover: #063881;
+	--color-link-visited: #5c6bc0;
+	--select-arrow: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" xml:space="preserve"><polyline style="fill:none;stroke:currentColor;stroke-width:4;stroke-miterlimit:10;" points="3,2 11,10 19,2 "/></svg>');
+
+	--color-background: var(--color-ui-light);
+	--color-text: var(--color-ui-dark);
+	--color-accent: var(--color-blush);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: var(--color-ui-dark);
+		--color-text: var(--color-ui-light);
+
+		--color-link-default: #71a2db;
+		--color-link-hover: #b3cff0;
+		--color-link-visited: #b6a1ee;
+	}
+}
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 1.25rem;
+	@include sm-and-up {
+		font-size: 1.5rem;
+	}
+}
+
+body {
+	font-family: var(--font-serif);
+	line-height: 1.4;
+	background-color: var(--color-background);
+	color: var(--color-text);
+	margin: auto 0;
+	font-variant-numeric: oldstyle-nums;
+}
+
+.hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}

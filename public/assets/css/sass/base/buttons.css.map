@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"sources": [
+		"sass/base/buttons.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,4EACC,iBAAA,qBACA,OAAA,oBAAA,MAAA,qBACA,cAAA,qBACA,MAAA,mBACA,OAAA,QACA,QAAA,aACA,UAAA,MACA,YAAA,IAEA,OAAA,OACA,QAAA,OAEA,eAAA,OAEA,QAAA,OAAA,KACA,WAAA,OACA,gBAAA,KACA,eAAA,UACA,YAAA,OAED,+FACC,iBAAA,uBACA,aAAA,uBACA,MAAA,mBACA,QAAA,EAED,uFACC,OAAA,QACA,QAAA,GAED,0GACC,iBAAA,qBACA,aAAA,qBAGD,gBACC,iBAAA,YACA,MAAA,qBAGD,mCACC,iBAAA,YACA,aAAA,uBACA,MAAA",
+	"file": "buttons.css",
+	"sourcesContent": [
+		":is(.button, button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"]) {\n\tbackground-color: var(--color-primary);\n\tborder: var(--border-width) solid var(--color-primary);\n\tborder-radius: var(--border-radius);\n\tcolor: var(--color-ui-light);\n\tcursor: pointer;\n\tdisplay: inline-block;\n\tfont-size: 0.8rem;\n\tfont-weight: 700;\n\n\theight: 2.5rem;\n\tpadding: 0.75rem;\n\n\tletter-spacing: 0.15rem;\n\n\tpadding: 0.75rem 2rem;\n\ttext-align: center;\n\ttext-decoration: none;\n\ttext-transform: uppercase;\n\twhite-space: nowrap;\n}\n:is(.button, button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"]) :is(:hover, :focus) {\n\tbackground-color: var(--color-secondary);\n\tborder-color: var(--color-secondary);\n\tcolor: var(--color-ui-light);\n\toutline: 0;\n}\n:is(.button, button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"]) [disabled] {\n\tcursor: default;\n\topacity: 0.5;\n}\n:is(.button, button, input[type=\"button\"], input[type=\"reset\"], input[type=\"submit\"]) [disabled] :is(:hover, :focus) {\n\tbackground-color: var(--color-primary);\n\tborder-color: var(--color-primary);\n}\n\n.button-outline {\n\tbackground-color: transparent;\n\tcolor: var(--color-primary);\n}\n\n.button-outline :is(:hover, :focus) {\n\tbackground-color: transparent;\n\tborder-color: var(--color-secondary);\n\tcolor: var(--color-secondary);\n}\n"
+	]
+}

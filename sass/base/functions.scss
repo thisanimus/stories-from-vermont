@@ -1,0 +1,61 @@
+$breakpoint-sm: 680px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1280px;
+
+@mixin sm-and-up {
+	@media (min-width: #{$breakpoint-sm}) {
+		@content;
+	}
+}
+
+@mixin md-and-up {
+	@media (min-width: #{$breakpoint-md}) {
+		@content;
+	}
+}
+
+@mixin lg-and-up {
+	@media (min-width: #{$breakpoint-lg}) {
+		@content;
+	}
+}
+%absolute-fill {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+%clean-button {
+	all: unset;
+	box-sizing: border-box;
+	color: currentColor;
+	display: block;
+	cursor: pointer;
+
+	> * {
+		pointer-events: none;
+	}
+}
+
+%form-element {
+	font: 400 0.9rem/1.2 var(--font-serif);
+	border-radius: var(--border-radius);
+	color: inherit;
+	appearance: none;
+	-webkit-appearance: none;
+	border: var(--border-width) solid var(--ui-gray-medium);
+	box-shadow: none;
+	outline: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	white-space: nowrap;
+	height: 2.25rem;
+	padding: 0.2rem 0.7rem;
+}
+
+%uppercase {
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+}

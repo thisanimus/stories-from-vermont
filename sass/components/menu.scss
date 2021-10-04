@@ -1,0 +1,11 @@
+a.site-link {
+	font-variant: small-caps;
+	font-weight: 800;
+	width: 12rem;
+	display: block;
+	color: var(--color-text);
+	svg {
+		width: 100%;
+		height: auto;
+	}
+}

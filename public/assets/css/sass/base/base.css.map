@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"sources": [
+		"sass/base/base.scss",
+		"sass/base/base.css"
+	],
+	"names": [],
+	"mappings": "AAAA,MACC,mBAAA,QACA,cAAA,QACA,aAAA,mBACA,gBAAA,iBACA,kBAAA,iBACA,gBAAA,OACA,eAAA,IACA,WAAA,KACA,WAAA,KACA,WAAA,KACA,WAAA,KACA,gBAAA,eACA,gBAAA,eACA,gBAAA,eAGD,ECAA,QACA,SDEC,OAAA,EACA,QAAA,EACA,WAAA,WAED,KACC,UAAA,KAGD,KACC,YAAA,WAAA,CAAA,WACA,YAAA,IACA,iBAAA,mBACA,MAAA,kBACA,OAAA,KAAA",
+	"file": "base.css",
+	"sourcesContent": [
+		":root {\n\t--color-ui-light-gray: #c9c9c9;\n\t--color-ui-light: #f2f2f2;\n\t--color-ui-dark: hsl(221, 16%, 20%);\n\t--color-primary: rgb(47, 83, 151);\n\t--color-secondary: rgb(35, 56, 100);\n\t--border-radius: 0.4rem;\n\t--border-width: 2px;\n\t--space-sm: 1rem;\n\t--space-md: 2rem;\n\t--space-lg: 4rem;\n\t--space-xl: 8rem;\n\t--breakpoint-sm: $breakpoint-sm;\n\t--breakpoint-md: $breakpoint-md;\n\t--breakpoint-lg: $breakpoint-lg;\n}\n\n*,\n::after,\n::before {\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n}\nhtml {\n\tfont-size: 1rem;\n}\n\nbody {\n\tfont-family: 'Open Sans', sans-serif;\n\tline-height: 1.5;\n\tbackground-color: var(--color-ui-light);\n\tcolor: var(--color-ui-dark);\n\tmargin: auto 0;\n}\n",
+		null
+	]
+}

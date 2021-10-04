@@ -1,0 +1,39 @@
+.post-date {
+	font-size: 1.2rem;
+}
+.post-header {
+	position: relative;
+	.spacer {
+		display: none;
+		@include sm-and-up {
+			display: block;
+		}
+		font-weight: normal;
+		text-rendering: optimizeLegibility;
+		position: absolute;
+		left: -3rem;
+		top: -6rem;
+		writing-mode: vertical-lr;
+		//opacity: 0.5;
+		color: var(--color-accent);
+	}
+}
+.post-image {
+	display: block;
+	background: var(--color-ui-dark);
+	border-radius: var(--border-radius);
+
+	img {
+		max-height: 40vh;
+		min-height: 16rem;
+		object-fit: cover;
+		opacity: 0.7;
+		filter: brightness(1.5);
+		mix-blend-mode: lighten;
+	}
+}
+.post {
+	@include sm-and-up {
+		margin-left: 3rem;
+	}
+}

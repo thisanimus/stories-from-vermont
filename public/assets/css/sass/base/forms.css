@@ -1,0 +1,64 @@
+:root {
+	--select-arrow: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23161f27'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E");
+}
+:is(input:not([type='checkbox']), input:not([type='radio']), input:not([type='button']), input:not([type='submit']), input:not([type='reset']), textarea, select) {
+	font-size: 1rem;
+	-webkit-appearance: none;
+	background-color: #fff;
+	border: var(--border-width) solid var(--color-ui-light-gray);
+	border-radius: var(--border-radius);
+	box-shadow: none;
+	box-sizing: inherit;
+	height: 2.5rem;
+	padding: 0.75rem;
+	margin: 0.25em 0 0.75em 0;
+	width: 100%;
+}
+:is(input:not([type='checkbox']), input:not([type='radio']), input:not([type='button']), input:not([type='submit']), input:not([type='reset']), textarea, select)
+	:is(:focus) {
+	border-color: var(--color-primary);
+	outline: 0;
+}
+select {
+	background: var(--background-intense) var(--select-arrow) calc(100% - 12px) 50%/12px no-repeat;
+}
+textarea {
+	min-height: 6.5rem;
+}
+label {
+	display: block;
+	width: 100%;
+}
+.label,
+label {
+	font-size: 0.9em;
+	font-family: 'Open Sans Condensed';
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 700;
+}
+legend {
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+}
+fieldset {
+	border-width: 0;
+	padding: 0;
+}
+input[type='checkbox'],
+input[type='radio'] {
+	display: inline;
+}
+.label-inline {
+	display: inline-block;
+	font-weight: 400;
+	margin-left: 0.5rem;
+}
+.form-row > * {
+	margin-top: 0;
+}
+.form-row > :not(:last-child) {
+	margin-right: var(--space-sm);
+}
+/*# sourceMappingURL=forms.css.map */

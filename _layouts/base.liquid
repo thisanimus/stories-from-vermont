@@ -1,0 +1,33 @@
+<!-- _layouts/base.liquid-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this is not coming from the page using this layout -->
+    <title>{{ title }}</title>
+	<meta name="description" content="{{ description }}" />
+
+	<!-- Reassure the browser that we are mobile-friendly -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="HandheldFriendly" content="True" />
+
+	<!-- Meta Tags for Social Media Platforms -->
+	<meta property="og:url" content="{{ page.url }}" />
+	<meta property="og:site_name" content="Randolph County Public Library" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ title }}" />
+	<meta property="og:description" content="{{ description }}" />
+	<meta property="og:image" content="/assets/img/og.png" />
+
+	<link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+	<main class="layout-grid">
+    	{{ content }}
+	</main>
+
+	{% include scripts %}
+</body>
+</html>

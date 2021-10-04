@@ -1,0 +1,42 @@
+:is(.button, button, input[type='button'], input[type='reset'], input[type='submit']) {
+	background-color: var(--color-primary);
+	border: var(--border-width) solid var(--color-primary);
+	border-radius: var(--border-radius);
+	color: var(--color-ui-light);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.8rem;
+	font-weight: 700;
+	height: 2.5rem;
+	padding: 0.75rem;
+	letter-spacing: 0.15rem;
+	padding: 0.75rem 2rem;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+:is(.button, button, input[type='button'], input[type='reset'], input[type='submit']) :is(:hover, :focus) {
+	background-color: var(--color-secondary);
+	border-color: var(--color-secondary);
+	color: var(--color-ui-light);
+	outline: 0;
+}
+:is(.button, button, input[type='button'], input[type='reset'], input[type='submit']) [disabled] {
+	cursor: default;
+	opacity: 0.5;
+}
+:is(.button, button, input[type='button'], input[type='reset'], input[type='submit']) [disabled] :is(:hover, :focus) {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+.button-outline {
+	background-color: transparent;
+	color: var(--color-primary);
+}
+.button-outline :is(:hover, :focus) {
+	background-color: transparent;
+	border-color: var(--color-secondary);
+	color: var(--color-secondary);
+}
+/*# sourceMappingURL=buttons.css.map */

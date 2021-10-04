@@ -1,0 +1,12 @@
+<article class="tease-post alignwide">
+	{% if post.data.image %}
+		{% image post.data.image.file, post.data.image.alt, 'tease-post-image frame' %}
+	{% endif %}
+	<div class="tease-post-content">
+		<h3>{{ post.data.title }}</h3>
+		<h2 class="post-date smallcaps">{{ post.data.date | date: "%b %d, %Y" | downcase}}</h2>
+		
+		<p>{{ post.data.excerpt }}</p>
+		<a class="post-link" href="{{ post.url }}">read more<span class="icon">»</span></a>
+	</div>
+</article>

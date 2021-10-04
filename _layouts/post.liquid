@@ -1,0 +1,21 @@
+---
+layout: base.liquid
+---
+{% include vermont_link %}
+{% if image %}
+	{% include image_details with image, classes:'alignwide post-image frame' %}
+{% endif %}
+<article class="post">
+	<header class="post-header">
+		<div class="spacer"><span class="light">●●●●</span>○○○○○○○○○○○○○○○○○○○○○○</div>
+		<h1>{{ title }}</h1>
+		<h2 class="post-date smallcaps">{{ date | date: "%A, %B %d, %Y" | downcase}}</h2>
+	
+		{% if song %}
+			{% include audio_player with song %}
+		{% endif %}
+	</header>
+	
+	{{ content }}
+
+</article>

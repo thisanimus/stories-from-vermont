@@ -1,0 +1,155 @@
+@font-face {
+	font-family: 'Dana Library Hand';
+	src: url('../font/danalibraryhand-regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Dana Library Hand';
+	src: url('../font/danalibraryhand-italic.woff2') format('woff2');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Dana Library Hand';
+	src: url('../font/danalibraryhand-bold.woff2') format('woff2');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Dana Library Hand';
+	src: url('../font/danalibraryhand-bolditalic.woff2') format('woff2');
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-variant: small-caps;
+	font-weight: 800;
+	line-height: 1;
+	margin: 0;
+}
+
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2.25rem;
+}
+h3 {
+	font-size: 1.75rem;
+}
+h4 {
+	font-size: 1.25rem;
+}
+
+p {
+	margin: 0.75em 0;
+}
+
+a {
+	text-decoration: none;
+}
+em {
+	font-style: italic;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6,
+p + ul,
+p + ol,
+p + a,
+ol + h1,
+ol + h2,
+ol + h3,
+ol + h4,
+ol + h5,
+ol + h6,
+ol + ul,
+ol + a,
+ul + ol,
+ul + h1,
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6,
+ul + ul,
+ul + ol,
+ul + a {
+	margin-top: 1em;
+}
+
+img {
+	width: 100%;
+}
+
+hr {
+	border: none;
+	height: 0.5rem;
+	line-height: 1;
+	margin: var(--space-md) 0;
+	&:before {
+		letter-spacing: 0.2em;
+		white-space: nowrap;
+		content: '••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••';
+	}
+}
+
+.hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+.highlight {
+	color: var(--color-primary);
+}
+blockquote {
+	margin: var(--space-md) 0;
+	font-family: var(--font-serif);
+	position: relative;
+	font-style: italic;
+	&:after {
+		content: '“';
+		position: absolute;
+		z-index: -1;
+		opacity: 0.2;
+		font-size: 8em;
+		top: -0.4em;
+		left: -0.2em;
+	}
+}
+cite {
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	font-size: 0.8em;
+}
+.text-wrapper {
+	max-width: 40rem;
+}
+
+sup {
+	font-variant-position: super;
+}
+.smallcaps {
+	font-variant: small-caps;
+}

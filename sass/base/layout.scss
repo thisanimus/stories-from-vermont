@@ -1,0 +1,30 @@
+.layout-grid {
+	position: relative;
+	display: grid;
+	margin-top: var(--space-md);
+	row-gap: var(--space-md);
+	grid-template-columns: 6vw 1fr 6vw;
+	overflow: hidden;
+	> * {
+		min-width: 0;
+		grid-column: 2 / 3;
+		&.alignwide {
+			grid-column: 2 / 3;
+		}
+		&.alignfull {
+			grid-column: 1 / 4;
+		}
+	}
+	@include sm-and-up {
+		grid-template-columns: 6vw 1fr minmax(20px, #{$breakpoint-sm}) 1fr 6vw;
+		> * {
+			grid-column: 3;
+			&.alignwide {
+				grid-column: 2 / 5;
+			}
+			&.alignfull {
+				grid-column: 1 / 6;
+			}
+		}
+	}
+}

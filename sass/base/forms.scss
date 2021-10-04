@@ -1,0 +1,126 @@
+// Form
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type='week'],
+input:not([type]),
+textarea,
+select {
+	background-color: rgba(255, 255, 255, 0.5);
+	@extend %form-element;
+	margin: 0 0 var(--space-sm) 0;
+	width: 100%;
+	border: var(--border-width) solid rgba(0, 0, 0, 0.1);
+	border-radius: var(--border-radius); // leave this here for consistency between interactable elements
+	&:focus {
+		background: #fff;
+		border: var(--border-width) solid var(--color-link-hover);
+		outline: 0;
+	}
+}
+
+select {
+	background: rgba(255, 255, 255, 0.1) var(--select-arrow) calc(100% - 12px) 50% / 12px no-repeat;
+	padding-right: 35px;
+}
+
+textarea {
+	min-height: 6.5rem;
+	padding-top: 0.5rem;
+}
+label {
+	display: block;
+	width: 100%;
+}
+label,
+.label {
+	font-size: 0.8rem;
+	line-height: 2;
+	font-weight: 600;
+	display: block;
+}
+::placeholder {
+	color: currentColor;
+	opacity: 0.6;
+}
+
+fieldset {
+	position: relative;
+	box-sizing: border-box;
+	border: none;
+	border-radius: var(--border-radius);
+	border: var(--border-width) solid var(--ui-gray-medium);
+
+	margin: var(--space-md) 0;
+	padding: var(--space-sm);
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+legend {
+	font-weight: 700;
+	float: left;
+	margin-bottom: 0.5em;
+	width: 100%;
+	opacity: 1;
+	z-index: 100;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	display: inline;
+}
+
+.label-inline {
+	display: inline-block;
+	font-weight: normal;
+	margin-left: 0.5rem;
+}
+
+.form-inline {
+	display: flex;
+
+	> * {
+		border-radius: 0;
+		margin-right: calc(0 - var(--border-width));
+		margin-left: calc(0 - var(--border-width));
+	}
+
+	:first-child {
+		margin: 0;
+		border-radius: var(--border-radius) 0 0 var(--border-radius);
+	}
+
+	:last-child {
+		margin: 0;
+		border-radius: 0 var(--border-radius) var(--border-radius) 0;
+	}
+	.cec-button,
+	button.cec-button,
+	a.cec-button,
+	.wp-block-button__link,
+	.wp-block-search__button {
+		transform: scale(1);
+	}
+}
+
+.form-row {
+	width: 100%;
+	display: flex;
+	> * {
+		width: 100%;
+		&:not(:last-child) {
+			margin-right: var(--space-sm);
+		}
+	}
+}
