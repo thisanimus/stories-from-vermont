@@ -1,0 +1,17 @@
+.weather {
+	height: 4rem;
+	display: grid;
+	line-height: 1.2;
+	grid-template-columns: 4rem 4rem 1fr;
+	gap: var(--space-sm);
+	align-items: center;
+	.current-color {
+		fill: var(--color-text);
+	}
+	.icon {
+		margin: -1rem;
+	}
+	.temp {
+		font-size: 2.5rem;
+	}
+}

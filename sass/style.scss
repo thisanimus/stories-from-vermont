@@ -6,17 +6,21 @@
 @import './base/buttons';
 @import './base/forms';
 @import './base/layout';
+@import './base/print';
 @import './base/media';
 @import './base/typography';
 
 // Components
+@import './components/image';
 @import './components/menu';
 @import './components/footer';
 @import './components/audio-player';
 @import './components/image-details';
 @import './components/tease';
 @import './components/subscribe';
+@import './components/weather';
 
 // Pages
 @import './pages/post';
+@import './pages/gallery';
 @import './pages/home';

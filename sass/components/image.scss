@@ -1,0 +1,53 @@
+.fade {
+	display: block;
+	background: var(--color-ui-dark);
+
+	img {
+		border-radius: var(--border-radius);
+		overflow: hidden;
+		filter: brightness(1.1);
+		mix-blend-mode: lighten;
+	}
+}
+
+.frame {
+	--frame-size: 1.75rem;
+	position: relative;
+	display: block;
+	img {
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&:before,
+	&:after {
+		background-image: url(../../assets/img/frame.svg);
+		pointer-events: none;
+		color: var(--color-ui-medium);
+		content: '';
+		position: absolute;
+		opacity: 0.3;
+		z-index: 1;
+		background-size: var(--frame-size) var(--frame-size);
+		width: var(--frame-size);
+		height: var(--frame-size);
+	}
+	&:before {
+		top: -0.7rem;
+		left: -0.7rem;
+		transform: rotate(180deg);
+	}
+	&:after {
+		bottom: -0.7rem;
+		right: -0.7rem;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.frame {
+		&:before,
+		&:after {
+			filter: invert(1);
+		}
+	}
+}

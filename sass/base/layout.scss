@@ -1,30 +1,48 @@
 .layout-grid {
 	position: relative;
 	display: grid;
-	margin-top: var(--space-md);
 	row-gap: var(--space-md);
 	grid-template-columns: 6vw 1fr 6vw;
-	overflow: hidden;
 	> * {
 		min-width: 0;
+		width: 100%;
 		grid-column: 2 / 3;
-		&.alignwide {
+		&.alignnarrow {
 			grid-column: 2 / 3;
 		}
 		&.alignfull {
 			grid-column: 1 / 4;
 		}
 	}
+
 	@include sm-and-up {
-		grid-template-columns: 6vw 1fr minmax(20px, #{$breakpoint-sm}) 1fr 6vw;
+		grid-template-columns:
+			6vw
+			1fr
+			minmax(0, 260px)
+			minmax(calc(#{$breakpoint-sm} - 12vw), #{$breakpoint-sm})
+			minmax(0, 260px)
+			1fr
+			6vw;
 		> * {
-			grid-column: 3;
-			&.alignwide {
-				grid-column: 2 / 5;
+			grid-column: 3 / 6;
+
+			&.alignnarrow {
+				grid-column: 4;
 			}
 			&.alignfull {
-				grid-column: 1 / 6;
+				grid-column: 1 / 8;
 			}
 		}
 	}
+}
+.alignwide {
+	max-width: $breakpoint-lg;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignnarrow {
+	max-width: $breakpoint-sm;
+	margin-left: auto;
+	margin-right: auto;
 }

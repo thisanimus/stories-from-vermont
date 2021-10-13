@@ -1,0 +1,46 @@
+---
+layout: base.liquid
+styles: '<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>'
+scripts: '<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>'
+---
+
+<article class="gallery">
+	<div class="gallery-description">
+		<h1>{{title}}</h1>
+		<h2 class="post-date smallcaps">{{ date | date: "%A, %B %d, %Y" | downcase}}</h2>
+		{{ content }}
+	</div>
+	
+		<div class="gallery-grid">
+			{% if images %}
+				{% for image in images %}
+					<button class="gallery-thumb" data-index="{{forloop.index}}">
+						{% image image %}
+					</button>
+				{% endfor %}
+			{% endif %}
+		</div>
+
+
+</article>
+{% if images %}
+<aside>
+	<div class="swiper">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			{% for image in images %}
+				<div class="swiper-slide">
+					{% include 'image-details' with image %}
+				</div>
+			{% endfor %}
+		</div>
+		
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+
+	</div>
+
+</aside>
+{% endif %}

@@ -1,3 +1,9 @@
-.featured {
-	background: #fff;
+.home-hero {
+	h1,
+	h2 {
+		font-variant: normal;
+	}
+	h2 {
+		margin-bottom: var(--space-md);
+	}
 }

@@ -1,0 +1,18 @@
+{% assign tags = song | id3 %}
+<div class="audio-player">
+	<audio id="audio" preload="metadata"  data-artist="{{ song.artist }}" data-title="{{ song.title }}">
+		<source src="/assets/audio/{{ song }}" />
+	</audio>
+	<div class="audio-controls" data-state="paused">
+		<button class="playpause">
+			<div class="background">●</div>
+			<div class="icon">▶</div>
+		</button>
+		<div class="audio-info">{{ tags.title }} - {{ tags.artist }}</div>
+		<div class="audio-time">
+			<div class="current">0:00</div>
+			<div class="divider">/</div>
+			<div class="duration"></div>
+		</div>
+	</div>
+</div>

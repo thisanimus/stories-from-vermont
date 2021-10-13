@@ -8,6 +8,12 @@
     <title>Stories from Vermont</title>
 	<meta name="description" content="These are stories from Vermont Some of them are true." />
 
+	<!-- Favicons -->
+	<link rel="icon" href="/assets/favicon/favicon.ico">
+	<link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" sizes="any">
+	<link rel="apple-touch-icon" href="/assets/favicon/apple.png">
+	<link rel="manifest" href="/assets/manifest.json">
+
 	<!-- Reassure the browser that we are mobile-friendly -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,15 +26,15 @@
 	<meta property="og:title" content="Stories from Vermont" />
 	<meta property="og:description" content="These are stories from Vermont Some of them are true." />
 	<meta property="og:image" content="/assets/img/og.png" />
-
+	
 	<link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
-	<main class="layout-grid">
-    	
-<div class="site-banner">
-	<div>stories from</div>
-	<?xml version="1.0" encoding="utf-8"?>
+	<nav class="menu layout-grid">
+	<div class="menu-wrapper">
+		<a class="site-link" href="/">
+			<div>stories from</div>
+			<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 450 70" style="enable-background:new 0 0 450 70;" xml:space="preserve">
@@ -155,70 +161,81 @@
 	c-4.2-2.36-3.22,1.68-3.73,4.46c-0.02,0-0.04,0-0.06,0C313.5,10.18,312.46,18.92,314.77,20.28z"/>
 </svg>
 
-</div>
+		</a>
+		<ul class="site-nav">
+			<li><a href="/posts">Posts</a></li>
+			<li><a href="/galleries">Photos</a></li>
+			<li><a href="/recipes">Recipes</a></li>
+		</ul>
+	</div>
+</nav>
+	<main class="layout-grid">
+    	<section class="home-hero">
+	<h1>These are stories from Vermont.</h1>
+	<h2>Some of them are true.</h2>
+	<a>Stay Updated ▼</a>&nbsp;&nbsp;&nbsp;<a href="/posts/welcome/">About ▶</a>
+</section>
+<section class="home-recent">
 
 
 
+<article class="tease-post">
 	
-
-		<article class="tease-post alignwide">
-	
-		<picture class="tease-post-image frame">
+		<picture class="tease-post-image fade frame">
 	    <source type="image/jpeg" srcset="/assets/img/2021-10-2-new-kid-in-the-woods-600w.jpeg 600w, /assets/img/2021-10-2-new-kid-in-the-woods-900w.jpeg 900w, /assets/img/2021-10-2-new-kid-in-the-woods-1500w.jpeg 1500w" sizes="(min-width: 1024px) 100vw, 50vw">
   <source type="image/webp" srcset="/assets/img/2021-10-2-new-kid-in-the-woods-600w.webp 600w, /assets/img/2021-10-2-new-kid-in-the-woods-900w.webp 900w, /assets/img/2021-10-2-new-kid-in-the-woods-1500w.webp 1500w" sizes="(min-width: 1024px) 100vw, 50vw">
 	  <img
 		src="/assets/img/2021-10-2-new-kid-in-the-woods-600w.jpeg"
 		width="600"
 		height="450"
-		alt="A pool of light on the forest floor."
+		alt="Soft light filtering down through colorful leaves."
 		loading="lazy"
 		decoding="async">
 	</picture>
 	
 	<div class="tease-post-content">
 		<h3>New Kid in the Woods</h3>
-		<h2 class="post-date smallcaps">oct 01, 2021</h2>
+		<h2 class="post-date smallcaps">oct 02, 2021</h2>
 		
 		<p>In the pre-dawn darkness I slip on my new trail shoes and wiggle my toes.  I think they're a bit too small, maybe 1/2 a size.  I guess my American feet can't decide if they are 43 or 44 European Foot Units long.</p>
 		<a class="post-link" href="/posts/new-kid-in-the-woods/">read more<span class="icon">»</span></a>
 	</div>
 </article>
-	
+
+</section>
+<section>
+<h3> Today in Vermont</h3>
+<h4>It Sounds Like:</h4>
 
 	
-
-	
-
-
-	
-
-		<article class="tease-post alignwide">
-	
-	<div class="tease-post-content">
-		<h3>Welcome</h3>
-		<h2 class="post-date smallcaps">sep 29, 2021</h2>
-		
-		<p></p>
-		<a class="post-link" href="/posts/welcome/">read more<span class="icon">»</span></a>
+<div class="audio-player">
+	<audio id="audio" preload="metadata"  data-artist="" data-title="">
+		<source src="/assets/audio/here-and-heaven.mp3" />
+	</audio>
+	<div class="audio-controls" data-state="paused">
+		<button class="playpause">
+			<div class="background">●</div>
+			<div class="icon">▶</div>
+		</button>
+		<div class="audio-info">Here and Heaven - Yo-Yo Ma, Stuart Duncan & Edgar Meyer</div>
+		<div class="audio-time">
+			<div class="current">0:00</div>
+			<div class="divider">/</div>
+			<div class="duration"></div>
+		</div>
 	</div>
-</article>
+</div>
+
+
+<h4>It Feels Like:</h4>
+<div class="weather">
 	
+</div>
 
-	
-
-	
-
-
+</section>
 	</main>
-
-	<!-- FontAwesome Icons -->
-<script src="https://kit.fontawesome.com/2a0da151f5.js" crossorigin="anonymous"></script>
-
-<!-- Site Scripts -->
+	
+	<!-- Site Scripts -->
 <script type="module" async src="/assets/js/script.js"></script>
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 </html>

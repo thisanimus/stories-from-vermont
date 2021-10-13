@@ -2,6 +2,7 @@
 	position: relative;
 }
 .image-details {
+	max-width: 18ch;
 	color: var(--color-ui-light);
 	position: absolute;
 	bottom: var(--space-xs);

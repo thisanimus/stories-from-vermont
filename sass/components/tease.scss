@@ -1,22 +1,21 @@
 .tease-post {
-	display: flex;
-	gap: var(--space-md);
+	@include sm-and-up {
+		display: flex;
+
+		gap: var(--space-md);
+	}
 }
 .tease-post-image {
 	background: var(--color-ui-dark);
 	border-radius: var(--border-radius);
-	width: 40%;
-	flex-shrink: 0;
 
-	img {
-		height: 100%;
-		object-fit: cover;
-		opacity: 0.7;
-		filter: brightness(1.5);
-		mix-blend-mode: lighten;
+	@include sm-and-up {
+		width: 40%;
+		flex-shrink: 0;
 	}
 }
 .tease-post-content {
+	align-self: center;
 	margin-top: var(--space-md);
 }
 .post-link {

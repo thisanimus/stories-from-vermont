@@ -9,3 +9,19 @@ a.site-link {
 		height: auto;
 	}
 }
+.menu-wrapper {
+	@include sm-and-up {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	//padding: var(--space-sm);
+}
+.menu {
+	margin-top: var(--space-md);
+	margin-bottom: var(--space-md);
+}
+.site-nav {
+	display: flex;
+	gap: var(--space-sm);
+}

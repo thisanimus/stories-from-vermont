@@ -2,23 +2,9 @@
 layout: post.liquid
 title: New Kid in the Woods
 type: post
-date: 2021-10-02
-image: 
-  file: posts/2021-10-2-new-kid-in-the-woods.jpg
-  alt: A pool of light on the forest floor.
-  meta:
-    - name: Camera
-      value: Google Pixel 2
-    - name: Aperture
-      value: ƒ/1.8
-    - name: Shutter
-      value: 1/60
-    - name: Focal Length
-      value: 4.442mm
-song: 
-  file: autumn.mp3
-  artist: Wylder
-  title: Autumn
+date: 2021-10-02 10:00:00
+image: posts/2021-10-2-new-kid-in-the-woods.jpg
+song: autumn.mp3
 excerpt: In the pre-dawn darkness I slip on my new trail shoes and wiggle my toes.  I think they're a bit too small, maybe 1/2 a size.  I guess my American feet can't decide if they are 43 or 44 European Foot Units long.
 ---
 

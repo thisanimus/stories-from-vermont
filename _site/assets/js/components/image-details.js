@@ -1,10 +1,11 @@
 export default class ImageDetails {
 	constructor(wrapper) {
 		this.wrapper = wrapper;
+		this.parent = this.wrapper.closest('figure');
 		this.toggle = this.wrapper.querySelector('button');
-		this.wrapper.dataset.state = 'collapsed';
+		this.parent.dataset.state = 'collapsed';
 		this.toggle.addEventListener('click', (e) => {
-			this.wrapper.dataset.state = this.wrapper.dataset.state == 'collapsed' ? 'expanded' : 'collapsed';
+			this.parent.dataset.state = this.parent.dataset.state == 'collapsed' ? 'expanded' : 'collapsed';
 		});
 	}
 }

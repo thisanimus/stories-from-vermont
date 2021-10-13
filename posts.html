@@ -1,0 +1,16 @@
+---
+layout: base.liquid
+title: Stories from Vermont
+description: These are stories from Vermont Some of them are true.
+---
+
+{% assign posts = collections.posts | sort: 'date' | reverse %}
+
+{% for post in posts %}
+
+		{% assign template = 'tease_' | append: post.data.type %}
+		{% include template with post %}
+
+
+{% endfor %}
+

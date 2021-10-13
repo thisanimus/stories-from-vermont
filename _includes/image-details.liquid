@@ -1,0 +1,44 @@
+{% assign exif = image | exif %}
+<figure class="image-details-wrapper {{ classes }}">
+	{% image image, 'image-details-image' %}
+	<figcaption class="image-details">
+		<ul class="image-meta">
+			{% if exif.Make and exif.Model %}
+				<li>
+					<div class="name">camera</div>
+					<div class="value">{{ exif.Make }} {{ exif.Model }}</div>
+				</li>
+			{% endif %}
+
+			{% if exif.LensMake and exif.LensModel %}
+				<li>
+					<div class="name">lens</div>
+					<div class="value">{{ exif.LensMake }} {{ exif.LensModel }}!</div>
+				</li>
+			{% endif %}
+
+			{% if exif.FocalLength %}
+				<li>
+					<div class="name">focal length</div>
+					<div class="value">{{ exif.FocalLength }}mm</div>
+				</li>
+			{% endif %}
+
+			{% if exif.FNumber %}
+				<li>
+					<div class="name">aperture</div>
+					<div class="value">ƒ{{ exif.FNumber }}</div>
+				</li>
+			{% endif %}
+
+			{% if exif.ExposureTime %}
+				<li>
+					<div class="name">shutter</div>
+					<div class="value">{{ exif.ExposureTime | shutter }}</div>
+				</li>
+			{% endif %}
+			
+		</ul>
+		<button class="show-details"><div class="icon">※</div></button>
+	</figcaption>
+</figure>

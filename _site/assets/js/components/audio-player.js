@@ -6,7 +6,8 @@ export default class AudioPlayer {
 		this.audio.addEventListener(
 			'loadedmetadata',
 			() => {
-				this.audioPlayer.insertAdjacentHTML('beforeend', this.playerMarkup());
+				this.audioDuration = this.audioPlayer.querySelector('.duration');
+				this.audioDuration.textContent = this.toTime(this.audio.duration);
 				this.audioControls = this.audioPlayer.querySelector('.audio-controls');
 				this.playpauseElement = this.audioControls.querySelector('.playpause');
 				this.playpauseIcon = this.playpauseElement.querySelector('.icon');
@@ -25,24 +26,7 @@ export default class AudioPlayer {
 			false
 		);
 	}
-	playerMarkup() {
-		const markup = `
-			<div class="audio-controls" data-state="paused">
-				<button class="playpause">
-					<div class="background">●</div>
-					<div class="icon">▶</div>
-					
-				</button>
-				<div class="audio-info">${this.audio.dataset.title} - ${this.audio.dataset.artist}</div>
-				<div class="audio-time">
-					<div class="current">0:00</div>
-					<div class="divider">/</div>
-					<div class="duration">${this.toTime(this.audio.duration)}</span>
-				</div>
-			</div>
-		`;
-		return markup;
-	}
+
 	playPause() {
 		if (this.audio.paused) {
 			this.audio.play();
