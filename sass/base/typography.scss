@@ -126,6 +126,7 @@ hr {
 	margin: var(--space-md) 0;
 	width: 100%;
 	overflow: hidden;
+	opacity: 0.5;
 	&:before {
 		display: block;
 		width: 0;

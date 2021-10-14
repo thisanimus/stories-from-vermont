@@ -7,3 +7,12 @@
 		margin-bottom: var(--space-md);
 	}
 }
+
+.home-widgets {
+	display: grid;
+	gap: var(--space-md);
+	grid-template-columns: 1fr;
+	@include md-and-up {
+		grid-template-columns: 1fr 1fr;
+	}
+}

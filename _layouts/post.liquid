@@ -1,12 +1,12 @@
 ---
 layout: base.liquid
 ---
-
+<article class="post">
 {% if image %}
-	{% include 'image-details' with image, classes:'post-image frame' %}
+	{% include 'image-details' with image, classes:'post-image frame fade' %}
 {% endif %}
-<article class="post alignnarrow">
-	<header class="post-header">
+
+	<header class="post-header alignnarrow">
 		{% if image %}
 			<div class="spacer"><span class="light">●●●●</span>○○○○○○○○○○○○○○○○○○○○○○</div>
 		{% endif %}
@@ -17,7 +17,9 @@ layout: base.liquid
 			{% include 'audio-player' with song %}
 		{% endif %}
 	</header>
-	{{ content }}
+	<section class="content alignnarrow">
+		{{ content }}
+	</section>
 	
 
 </article>

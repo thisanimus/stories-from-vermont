@@ -16,16 +16,20 @@ song: here-and-heaven.mp3
 {% include template with post %}
 
 </section>
-<section>
-<h3> Today in Vermont</h3>
-<h4>It Sounds Like:</h4>
-{% if song %}
-	{% include 'audio-player' with song %}
-{% endif %}
+<hr>
+<section class="home-widgets">
+	<div class="widget-song">
+		<h4>we're listening to:</h4>
+		{% if song %}
+			{% include 'audio-player' with song %}
+		{% endif %}
+	</div>
 
-<h4>It Feels Like:</h4>
-<div class="weather">
-	
-</div>
+	<div class="widget-weather">
+		<h4>it feels like:</h4>
+		<div class="weather">
+			
+		</div>
+	</div>
 
 </section>

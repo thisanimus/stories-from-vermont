@@ -1,7 +1,7 @@
 .layout-grid {
 	position: relative;
 	display: grid;
-	row-gap: var(--space-md);
+	row-gap: var(--space-lg);
 	grid-template-columns: 6vw 1fr 6vw;
 	> * {
 		min-width: 0;
