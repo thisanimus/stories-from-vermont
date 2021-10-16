@@ -1,5 +1,6 @@
 import AudioPlayer from './components/audio-player.js';
 import ImageDetails from './components/image-details.js';
+import Gallery from './components/gallery.js';
 
 const audioPlayers = document.querySelectorAll('.audio-player');
 audioPlayers.forEach((audioPlayer) => {
@@ -81,14 +82,7 @@ if (weather) {
 	});
 }
 
-const swiper = new Swiper('.swiper', {
-	// Optional parameters
-
-	loop: true,
-
-	// Navigation arrows
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-});
+const gallery = document.querySelector('.gallery');
+if (gallery) {
+	new Gallery(gallery);
+}

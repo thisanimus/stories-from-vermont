@@ -42,28 +42,3 @@
 		margin-bottom: var(--space-md);
 	}
 }
-
-.gallery {
-	@include md-and-up {
-		display: flex;
-		text-align: right;
-		gap: var(--space-lg);
-	}
-}
-.gallery-description {
-	@include md-and-up {
-		width: 35%;
-	}
-}
-.gallery-grid {
-	@include md-and-up {
-		width: 65%;
-	}
-	display: grid;
-	grid-gap: var(--space-sm);
-	grid-template-columns: repeat(auto-fill, minmax(8rem, 2fr));
-	justify-items: end;
-	> * {
-		flex-shrink: 0;
-	}
-}

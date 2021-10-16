@@ -1,8 +1,42 @@
+:root {
+	--swiper-theme-color: var(--color-ui-light);
+	--swiper-navigation-size: 2rem;
+}
+
+.post-gallery {
+	@include md-and-up {
+		display: flex;
+		text-align: right;
+		gap: var(--space-md);
+	}
+}
+.gallery-description {
+	@include md-and-up {
+		width: 35%;
+		flex-shrink: 0;
+	}
+}
+
+.gallery-grid {
+	display: grid;
+	grid-gap: var(--space-sm);
+	grid-template-columns: repeat(auto-fill, minmax(6rem, 2fr));
+	@include md-and-up {
+		grid-template-columns: repeat(auto-fill, minmax(8rem, 2fr));
+	}
+	justify-items: end;
+	> * {
+		flex-shrink: 0;
+	}
+}
+
 button.gallery-thumb {
 	@extend %clean-button;
 	padding: 0;
 	margin: 0 !important;
 	height: auto;
+	border: var(--border-radius);
+	overflow: hidden;
 	picture {
 		height: 100%;
 		display: block;
@@ -10,5 +44,75 @@ button.gallery-thumb {
 	img {
 		height: 100%;
 		object-fit: cover;
+	}
+}
+.swiper-button-prev,
+.swiper-button-next {
+	transition: 250ms opacity ease;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	opacity: 0.2;
+	&:hover {
+		opacity: 1;
+	}
+}
+.swiper-button-prev:after {
+	font-family: var(--font-serif);
+	content: '<';
+}
+.swiper-button-next:after {
+	font-family: var(--font-serif);
+	content: '>';
+}
+
+.gallery-swiper {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background: #000;
+	transition: opacity 250ms ease-out, transform 0ms linear 250ms;
+	transform: translateX(-100vw);
+	opacity: 0;
+
+	button.close {
+		@extend %clean-button;
+		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+		font-size: 2em;
+		display: block;
+		position: absolute;
+		top: 1vw;
+		right: 1vw;
+		line-height: 1;
+		width: 1em;
+		height: 1em;
+		text-align: center;
+		z-index: 10;
+	}
+}
+
+[data-gallery-state='open'] {
+	.gallery-swiper {
+		transition: opacity 250ms ease-out;
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+.swiper-slide {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	figure,
+	img {
+		max-height: 100vh;
+		display: block;
+		object-fit: contain;
+		//height: 100%;
+	}
+	.image-details {
+		right: 1.5rem;
 	}
 }

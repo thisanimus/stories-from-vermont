@@ -28,7 +28,7 @@ function convertShutter(decimal) {
 	return '1/' + Math.round(denominator);
 }
 
-async function imageShortcode(src, classes, alt) {
+async function imageShortcode(src, classes, alt, widths = [600, 900, 1500]) {
 	let sizes = '(min-width: 1024px) 100vw, 50vw';
 	let srcPrefix = `./assets/img/`;
 	src = srcPrefix + src;
@@ -50,7 +50,7 @@ async function imageShortcode(src, classes, alt) {
 	let defaultFormat = src.endsWith('.png') ? 'png' : 'jpeg';
 
 	let metadata = await Image(src, {
-		widths: [600, 900, 1500],
+		widths: widths,
 		formats: [defaultFormat, 'webp'],
 		urlPath: '/assets/img',
 		outputDir: './_site/assets/img',

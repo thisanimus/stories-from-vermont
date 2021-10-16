@@ -31,7 +31,7 @@
 </head>
 <body>
 	<nav class="menu layout-grid">
-	<div class="menu-wrapper alignwide">
+	<div class="menu-wrapper">
 		<a class="site-link" href="/">
 			<div>stories from</div>
 			<?xml version="1.0" encoding="utf-8"?>
@@ -170,13 +170,16 @@
 	</div>
 </nav>
 	<main class="layout-grid">
-    	
+    	<section class="home-hero">
+	<h1>These are stories from Vermont.</h1>
+	<h2>Some of them are true.</h2>
+	<a>Stay Updated ▼</a>&nbsp;&nbsp;&nbsp;<a href="/posts/welcome/">About ▶</a>
+</section>
+<section class="home-recent">
 
 
 
-
-		
-		<article class="tease-post alignwide">
+<article class="tease-post">
 	
 		<picture class="tease-post-image fade frame">
 	    <source type="image/jpeg" srcset="/assets/img/2021-10-2-new-kid-in-the-woods-600w.jpeg 600w, /assets/img/2021-10-2-new-kid-in-the-woods-900w.jpeg 900w, /assets/img/2021-10-2-new-kid-in-the-woods-1500w.jpeg 1500w" sizes="(min-width: 1024px) 100vw, 50vw">
@@ -199,57 +202,40 @@
 	</div>
 </article>
 
-
-
-
-		
-		<article class="tease-post alignwide">
-	
-		<picture class="tease-post-image fade frame">
-	    <source type="image/jpeg" srcset="/assets/img/pollo-asado-butternut-squash-tacos-600w.jpeg 600w, /assets/img/pollo-asado-butternut-squash-tacos-900w.jpeg 900w, /assets/img/pollo-asado-butternut-squash-tacos-1500w.jpeg 1500w" sizes="(min-width: 1024px) 100vw, 50vw">
-  <source type="image/webp" srcset="/assets/img/pollo-asado-butternut-squash-tacos-600w.webp 600w, /assets/img/pollo-asado-butternut-squash-tacos-900w.webp 900w, /assets/img/pollo-asado-butternut-squash-tacos-1500w.webp 1500w" sizes="(min-width: 1024px) 100vw, 50vw">
-	  <img
-		src="/assets/img/pollo-asado-butternut-squash-tacos-600w.jpeg"
-		width="600"
-		height="592"
-		alt="A color plate of tacos."
-		loading="lazy"
-		decoding="async">
-	</picture>
-	
-	<div class="tease-post-content">
-		<h3>Pollo Asado Tacos with Roast Butternut Squash</h3>
-		<h2 class="post-date smallcaps">sep 26, 2021</h2>
-		
-		<p>A Northeast/Southwest mashup for the ages.</p>
-		<a class="post-link" href="/recipies/southwest-northeast-tacos/">read more<span class="icon">»</span></a>
-	</div>
-</article>
-
-
-
-
-		
-		<article class="tease-post alignwide">
-	
-	<div class="tease-post-content">
-		<h3>Welcome</h3>
-		<h2 class="post-date smallcaps">sep 26, 2021</h2>
-		
-		<p></p>
-		<a class="post-link" href="/posts/welcome/">read more<span class="icon">»</span></a>
-	</div>
-</article>
-
-
-
-
-<section>
+</section>
 <hr>
-<div class="weather">
-	
+<section class="home-widgets">
+	<div class="widget-song">
+		<h4>we're listening to:</h4>
+		
+			
+<div class="audio-player">
+	<audio id="audio" preload="metadata"  data-artist="" data-title="">
+		<source src="/assets/audio/here-and-heaven.mp3" />
+	</audio>
+	<div class="audio-controls" data-state="paused">
+		<button class="playpause">
+			<div class="background">●</div>
+			<div class="icon">▶</div>
+		</button>
+		<div class="audio-info">Here and Heaven<br><span class="artist">Yo-Yo Ma, Stuart Duncan & Edgar Meyer</span></div>
+		<div class="audio-time">
+			<div class="current">0:00</div>
+			<div class="divider">/</div>
+			<div class="duration"></div>
+		</div>
+	</div>
 </div>
-<hr>
+		
+	</div>
+
+	<div class="widget-weather">
+		<h4>it feels like:</h4>
+		<div class="weather">
+			
+		</div>
+	</div>
+
 </section>
 	</main>
 	
