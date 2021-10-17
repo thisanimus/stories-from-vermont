@@ -1,6 +1,6 @@
 ---
 layout: base.liquid
-title: Stories from Vermont
+title: Photos from Vermont
 description: These are stories from Vermont Some of them are true.
 styles: '<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>'
 scripts: '<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>'
@@ -38,7 +38,7 @@ scripts: '<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script
 		<ol class="gallery-grids">
 			{% for gallery in galleries %}
 				<li class="gallery-grid-wrapper">
-					<p>{{ gallery.data.title }} • {{ gallery.data.date | date: "%b %d, %Y" }}</p>
+					<p><a href="{{ gallery.url }}">{{ gallery.data.title }}</a> • {{ gallery.data.date | date: "%b %d, %Y" }}</p>
 					<div class="gallery-grid">
 						{% for image in gallery.data.images %}
 							<button class="gallery-thumb" data-gallery="" data-index="{{index}}">

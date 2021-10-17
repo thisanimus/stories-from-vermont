@@ -1,3 +1,13 @@
-<article>
-<h2>{{ post.data.title }}</h2>
-</article>
+<a class="tease-gallery frame" href="{{ post.url }}">
+	{% if post.data.images %}
+		{% assign image = post.data.images | first  %}
+		{% image image, 'tease-gallery-image' %}
+	{% endif %}
+	<div class="tease-gallery-content">
+		<h3>{{ post.data.title }}</h3>
+		<h2 class="post-date smallcaps">{{ post.data.date | date: "%b %d, %Y" | downcase}}</h2>
+		
+		<p>{{ post.data.excerpt }}</p>
+
+	</div>
+</a>

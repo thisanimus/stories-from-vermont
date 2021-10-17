@@ -25,3 +25,32 @@
 		font-weight: 400;
 	}
 }
+
+a.tease-gallery {
+	position: relative;
+	display: block;
+	color: var(--color-ui-light);
+	&:hover {
+		color: #fff;
+	}
+	.tease-gallery-content {
+		border-radius: var(--border-radius);
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		padding: 8vw var(--space-md);
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 100%);
+	}
+
+	.tease-gallery-image {
+		border-radius: var(--border-radius);
+		overflow: hidden;
+
+		//opacity: 0.5;
+		display: block;
+		@extend %absolute-fill;
+		object-fit: cover;
+		img {
+		}
+	}
+}
