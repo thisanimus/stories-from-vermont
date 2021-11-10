@@ -6,13 +6,33 @@
 	h2 {
 		margin-bottom: var(--space-md);
 	}
-}
+	@include md-and-up {
+		display: grid;
+		grid-template-columns: 3fr 0.5rem 2fr;
+		gap: var(--space-md);
+	}
+	.divider {
+		@include md-and-up {
+			position: relative;
+			overflow: hidden;
 
-.home-widgets {
+			hr {
+				margin: 0;
+				writing-mode: vertical-lr;
+				height: auto;
+			}
+			hr:before {
+				line-height: 0;
+				position: absolute;
+			}
+		}
+	}
+}
+.home-hero-text {
+	align-self: center;
+}
+.home-hero-widgets {
 	display: grid;
 	gap: var(--space-md);
 	grid-template-columns: 1fr;
-	@include md-and-up {
-		grid-template-columns: 1fr 1fr;
-	}
 }

@@ -3,6 +3,10 @@ export default class Gallery {
 		this.gallery = gallery;
 		this.swiper = new Swiper('.swiper', {
 			loop: true,
+			preloadImages: false,
+			lazy: {
+				loadPrevNext: true,
+			},
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',

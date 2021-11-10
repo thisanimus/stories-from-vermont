@@ -1,17 +1,25 @@
 .weather {
-	height: 4rem;
 	display: grid;
 	line-height: 1.2;
-	grid-template-columns: 4rem 3rem 1fr;
-	gap: var(--space-sm);
+	grid-template-areas: 'icon temp' 'icon description';
+	grid-template-columns: 3.5rem 1fr;
+	column-gap: 0.5rem;
 	align-items: center;
+	min-height: 5rem;
 	.current-color {
 		fill: var(--color-text);
 	}
 	.icon {
-		margin: -0.5rem;
+		align-self: start;
+		grid-area: icon;
+		margin: -0.25rem;
 	}
 	.temp {
-		font-size: 2.5rem;
+		grid-area: temp;
+		font-size: 2rem;
+	}
+	.description {
+		font-size: 0.9rem;
+		grid-area: description;
 	}
 }

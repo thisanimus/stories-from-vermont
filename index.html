@@ -5,9 +5,28 @@ description: These are stories from Vermont Some of them are true.
 song: here-and-heaven.mp3
 ---
 <section class="home-hero">
-	<h1>These are stories from Vermont.</h1>
-	<h2>Some of them are true.</h2>
-	<a>Stay Updated ▼</a>&nbsp;&nbsp;&nbsp;<a href="/posts/welcome/">About ▶</a>
+	<div class="home-hero-text">
+		<h1>These are stories from Vermont.</h1>
+		<h2>Some of them are true.</h2>
+		<a>Stay Updated ▼</a>&nbsp;&nbsp;&nbsp;<a href="/posts/welcome/">About ▶</a>
+	</div>
+	<div class="divider">
+		<hr>
+	</div>
+	<div class="home-hero-widgets">
+		{% if song %}
+			<div class="widget-song">
+				<h4>we're listening to:</h4>
+				{% include 'audio-player' with song %}
+			</div>
+		{% endif %}
+
+		<div class="widget-weather">
+			<h4>it feels like:</h4>
+			<div class="weather">
+			</div>
+		</div>
+	</div>
 </section>
 <section class="home-recent">
 
@@ -18,18 +37,6 @@ song: here-and-heaven.mp3
 </section>
 <hr>
 <section class="home-widgets">
-	<div class="widget-song">
-		<h4>we're listening to:</h4>
-		{% if song %}
-			{% include 'audio-player' with song %}
-		{% endif %}
-	</div>
-
-	<div class="widget-weather">
-		<h4>it feels like:</h4>
-		<div class="weather">
-			
-		</div>
-	</div>
+	
 
 </section>

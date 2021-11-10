@@ -20,7 +20,7 @@ scripts: '<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script
 					<!-- Slides -->
 					{% for image in images %}
 						<div class="swiper-slide">
-							{% include 'image-details' with image %}
+							{% include 'gallery-image' with image %}
 						</div>
 					{% endfor %}
 				</div>
