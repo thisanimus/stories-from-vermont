@@ -4,9 +4,7 @@ export default class Gallery {
 		this.swiper = new Swiper('.swiper', {
 			loop: true,
 			preloadImages: false,
-			lazy: {
-				loadPrevNext: true,
-			},
+			lazy: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',

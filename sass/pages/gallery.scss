@@ -114,6 +114,13 @@ button.gallery-thumb {
 		display: block;
 		object-fit: contain;
 		//height: 100%;
+		&.swiper-lazy {
+			opacity: 0;
+			transition: opacity 250ms ease;
+		}
+		&.swiper-lazy-loaded {
+			opacity: 1;
+		}
 	}
 	.image-details {
 		right: 1.5rem;

@@ -87,7 +87,6 @@ async function imageShortcode(src, classes, alt, widths = [600, 900, 1500]) {
 async function galleryImageShortcode(src) {
 	let alt;
 	let widths = [600, 900, 1500];
-	let sizes = '(min-width: 1024px) 100vw, 50vw';
 	let srcPrefix = `./assets/img/`;
 	src = srcPrefix + src;
 
@@ -104,7 +103,7 @@ async function galleryImageShortcode(src) {
 
 	let metadata = await Image(src, {
 		widths: widths,
-		formats: [defaultFormat, 'webp'],
+		formats: [defaultFormat],
 		urlPath: '/assets/img',
 		outputDir: './_site/assets/img',
 		/* =====
@@ -120,22 +119,16 @@ async function galleryImageShortcode(src) {
 	});
 	let lowsrc = metadata[defaultFormat][0];
 	return `
-		<picture>
-	  ${Object.values(metadata)
-			.map((imageFormat) => {
-				return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat
-					.map((entry) => entry.srcset)
-					.join(', ')}" sizes="${sizes}">`;
-			})
-			.join('\n')}
+
 	  <img
 	    class="swiper-lazy"
 		data-src="${lowsrc.url}"
+		data-srcset="${metadata[defaultFormat].map((entry) => entry.srcset).join(', ')}"
 		width="${lowsrc.width}"
 		height="${lowsrc.height}"
 		alt="${alt}">
 		<div class="swiper-lazy-preloader"></div>
-	</picture>
+
 	`;
 }
 
