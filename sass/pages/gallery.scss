@@ -16,9 +16,13 @@
 		flex-shrink: 0;
 	}
 }
+.gallery {
+	width: 100%;
+}
 
 .gallery-grid {
 	display: grid;
+
 	grid-gap: var(--space-sm);
 	grid-template-columns: repeat(auto-fill, minmax(6rem, 2fr));
 	@include md-and-up {
@@ -35,6 +39,7 @@ button.gallery-thumb {
 	padding: 0;
 	margin: 0 !important;
 	height: 6rem;
+	width: 100%;
 	background: rgba(0, 0, 0, 0.1);
 	border: var(--border-radius);
 	overflow: hidden;
