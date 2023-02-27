@@ -2,8 +2,9 @@
 layout: base.liquid
 title: Stories from Vermont
 description: These are stories from Vermont Some of them are true.
-song: '05 Diamond Dusting.mp3'
+song: '05 The Unwinding Cable Car.mp3'
 ---
+
 <section class="home-hero">
 	<div class="home-hero-text">
 		<h1>These are stories from Vermont.</h1>
@@ -11,27 +12,24 @@ song: '05 Diamond Dusting.mp3'
 		<a>Stay Updated ▼</a>&nbsp;&nbsp;&nbsp;<a href="/posts/welcome/">About ▶</a>
 	</div>
 	<div class="divider">
-		<hr>
+		<hr />
 	</div>
 	<div class="home-hero-widgets">
 		{% if song %}
-			<div class="widget-song">
-				<h4>we're listening to:</h4>
-				{% include 'audio-player' with song %}
-			</div>
+		<div class="widget-song">
+			<h4>we're listening to:</h4>
+			{% include 'audio-player' with song %}
+		</div>
 		{% endif %}
 
 		<div class="widget-weather">
 			<h4>it feels like:</h4>
-			<div class="weather">
-			</div>
+			<div class="weather"></div>
 		</div>
 	</div>
 </section>
 <section class="home-recent">
-
-{% assign post = collections.posts | sort: 'date' | reverse | first %}
-{% assign template = 'tease_' | append: post.data.type %}
-{% include template with post %}
-
+	{% assign post = collections.posts | sort: 'date' | reverse | first %} {%
+	assign template = 'tease_' | append: post.data.type %} {% include template
+	with post %}
 </section>
