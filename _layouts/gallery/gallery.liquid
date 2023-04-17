@@ -1,5 +1,5 @@
 ---
-layout: base.liquid
+layout: base/base.liquid
 styles: '<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css"/>'
 scripts: '<script src="/assets/js/components/swiper.min.js"></script>'
 ---
@@ -20,7 +20,7 @@ scripts: '<script src="/assets/js/components/swiper.min.js"></script>'
 					<!-- Slides -->
 					{% for image in images %}
 						<div class="swiper-slide">
-							{% include 'gallery-image' with image %}
+							{% include 'gallery_image/gallery_image' with image %}
 						</div>
 					{% endfor %}
 				</div>

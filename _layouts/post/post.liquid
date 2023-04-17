@@ -1,9 +1,9 @@
 ---
-layout: base.liquid
+layout: base/base.liquid
 ---
 <article class="post">
 {% if image %}
-	{% include 'image-details' with image, classes:'post-image frame fade' %}
+	{% include 'image_details/image_details' with image, classes:'post-image frame fade' %}
 {% endif %}
 
 	<header class="post-header alignnarrow">
@@ -14,7 +14,7 @@ layout: base.liquid
 		<h2 class="post-date smallcaps">{{ date | date: "%A, %B %d, %Y" | downcase}}</h2>
 	
 		{% if song %}
-			{% include 'audio-player' with song %}
+			{% include 'audio_player/audio_player' with song %}
 		{% endif %}
 	</header>
 	<section class="content alignnarrow">

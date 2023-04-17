@@ -1,1 +1,6 @@
 README.md
+_drafts
+_includes/**/*.scss
+_includes/**/*.js
+_layouts/**/*.scss
+_layouts/**/*.js

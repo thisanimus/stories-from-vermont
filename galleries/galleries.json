@@ -1,5 +1,5 @@
 {
-	"layout": "gallery.liquid",
+	"layout": "gallery/gallery.liquid",
 	"type": "gallery",
 	"tags": ["posts", "galleries"]
 }

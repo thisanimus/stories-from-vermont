@@ -1,6 +1,6 @@
-import AudioPlayer from './components/audio-player.js';
-import ImageDetails from './components/image-details.js';
-import Gallery from './components/gallery.js';
+import AudioPlayer from '../_includes/audio_player/audio_player.js';
+import ImageDetails from '../_includes/image_details/image_details.js';
+import Gallery from '../_includes/gallery/gallery.js';
 
 const audioPlayers = document.querySelectorAll('.audio-player');
 audioPlayers.forEach((audioPlayer) => {
@@ -55,7 +55,8 @@ const weather = document.querySelector('.weather');
 if (weather) {
 	fetchJsonData(weatherUrl).then((data) => {
 		let ts = Math.floor(Date.now() / 1000);
-		let now = ts >= data.sys.sunrise && ts <= data.sys.sunset ? 'today' : 'tonight';
+		let now =
+			ts >= data.sys.sunrise && ts <= data.sys.sunset ? 'today' : 'tonight';
 		let temp = parseInt(data.main.temp);
 		let feel;
 		if (temp >= 80) {
@@ -70,7 +71,9 @@ if (weather) {
 			feel = 'really cold';
 		}
 		if (data.weather[0].icon) {
-			fetchTextData('/assets/img/weather/' + data.weather[0].icon + '.svg').then((text) => {
+			fetchTextData(
+				'/assets/img/weather/' + data.weather[0].icon + '.svg'
+			).then((text) => {
 				let markup = `
 					<div class="icon">${text}</div>
 					<div class="temp">${temp}°</div>

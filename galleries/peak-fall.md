@@ -1,5 +1,5 @@
 ---
-layout: gallery.liquid
+layout: gallery/gallery.liquid
 title: Beginning of Fall
 description: Little hints of fall are in the treetops in Taylor Park.
 type: gallery

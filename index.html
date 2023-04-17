@@ -1,5 +1,5 @@
 ---
-layout: base.liquid
+layout: base/base.liquid
 title: Stories from Vermont
 description: These are stories from Vermont Some of them are true.
 song: '05 The Unwinding Cable Car.mp3'
@@ -18,7 +18,7 @@ song: '05 The Unwinding Cable Car.mp3'
 		{% if song %}
 		<div class="widget-song">
 			<h4>we're listening to:</h4>
-			{% include 'audio-player' with song %}
+			{% include 'audio_player/audio_player' with song %}
 		</div>
 		{% endif %}
 
@@ -30,6 +30,6 @@ song: '05 The Unwinding Cable Car.mp3'
 </section>
 <section class="home-recent">
 	{% assign post = collections.posts | sort: 'date' | reverse | first %} {%
-	assign template = 'tease_' | append: post.data.type %} {% include template
-	with post %}
+	assign template = 'tease/tease_' | append: post.data.type %} {% include
+	template with post %}
 </section>

@@ -1,5 +1,5 @@
 ---
-layout: gallery.liquid
+layout: gallery/gallery.liquid
 title: Apron
 description: Met a local shopkeeper, and made and apron.
 date: 2022-10-12 10:00:00
