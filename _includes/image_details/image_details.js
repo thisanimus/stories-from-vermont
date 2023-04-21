@@ -5,8 +5,8 @@ export default class ImageDetails {
 		this.toggle = this.wrapper.querySelector('button');
 		this.parent.dataset.state = 'collapsed';
 		this.toggle.addEventListener('click', (e) => {
-			console.log('clicked');
-			this.parent.dataset.state = this.parent.dataset.state == 'collapsed' ? 'expanded' : 'collapsed';
+			this.parent.dataset.state =
+				this.parent.dataset.state == 'collapsed' ? 'expanded' : 'collapsed';
 		});
 	}
 }

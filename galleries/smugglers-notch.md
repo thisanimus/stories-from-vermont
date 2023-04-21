@@ -4,12 +4,12 @@ title: Smugglers Notch
 type: gallery
 date: 2021-10-06
 images:
-  - 'galleries/2021-10-06-smugglers-notch.jpg'
-  - 'galleries/2021-10-06-chelsea.jpg'
-  - 'galleries/2021-10-06-leaves-2.jpg'
-  - 'galleries/2021-10-06-leaves.jpg'
-  - 'galleries/2021-10-06-mushroom.jpg'
-  - 'galleries/2021-10-06-rowan.jpg'
+  - 'photos/2021-10-06-smugglers-notch.jpg'
+  - 'photos/2021-10-06-chelsea.jpg'
+  - 'photos/2021-10-06-leaves-2.jpg'
+  - 'photos/2021-10-06-leaves.jpg'
+  - 'photos/2021-10-06-mushroom.jpg'
+  - 'photos/2021-10-06-rowan.jpg'
 excerpt: An early morning hike in Smuggler's Notch.
 ---
 

@@ -1,8 +1,9 @@
 const Image = require('@11ty/eleventy-img');
+const fs = require('fs');
+const path = require('path');
 const exifr = require('exifr');
 const NodeID3 = require('node-id3');
 
-const path = require('path');
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addLiquidFilter('exif', getExif);
 	eleventyConfig.addLiquidFilter('shutter', convertShutter);
@@ -69,7 +70,9 @@ async function imageShortcode(src, classes, alt, widths = [600, 900, 1500]) {
 	return `<picture ${pictureClass}>
 	  ${Object.values(metadata)
 			.map((imageFormat) => {
-				return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat
+				return `  <source type="${
+					imageFormat[0].sourceType
+				}" srcset="${imageFormat
 					.map((entry) => entry.srcset)
 					.join(', ')}" sizes="${sizes}">`;
 			})

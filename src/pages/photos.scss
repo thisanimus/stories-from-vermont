@@ -1,0 +1,49 @@
+.photos-by-date {
+	[class^='label'] {
+		position: sticky;
+		z-index: 0;
+		background: var(--color-background);
+		line-height: 1;
+		width: 2.5rem;
+	}
+	.label-year {
+		font-size: 1.4rem;
+		height: 1.4rem;
+		top: 0;
+		z-index: 1;
+	}
+
+	.day {
+		display: grid;
+		grid-template-columns: 3rem 1fr;
+		> * {
+			min-width: 0;
+		}
+		margin-bottom: var(--space-sm);
+	}
+	.label-month-day {
+		position: sticky;
+		top: 1.4rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		height: 1rem;
+	}
+
+	.gallery-thumb {
+		height: 5rem;
+		@include md-and-up {
+			height: 8rem;
+		}
+	}
+}
+.photo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+	gap: var(--border-width);
+	> * {
+		min-width: 0;
+	}
+	@include md-and-up {
+		grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+	}
+}

@@ -1,6 +1,7 @@
 @import '../node_modules/baselayer.css/dist/baselayer';
 @import './base/functions';
 @import './base/base';
+@import './base/layout';
 @import './base/image';
 @import './base/typography';
 
@@ -18,3 +19,4 @@
 @import '../_layouts/post/post';
 @import '../_layouts/gallery/gallery';
 @import './pages/home';
+@import './pages/photos';

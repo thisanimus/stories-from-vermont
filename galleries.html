@@ -1,0 +1,56 @@
+---
+layout: base/base.liquid
+title: Photos from Vermont
+description: These are stories from Vermont Some of them are true.
+styles: '<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>'
+scripts: '<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>'
+---
+
+{% assign galleries = collections.galleries | sort: 'date' | reverse %}
+
+<article class="galleries">
+
+
+	<div class="gallery">
+		<div class="gallery-swiper">
+			<button class="close">꟯<span class="hidden">close gallery</button>
+			<div class="swiper">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					{% for gallery in galleries %}
+						{% for image in gallery.data.images %}
+							<div class="swiper-slide">
+								{% include 'gallery_image/gallery_image' with image %}
+							</div>
+						{% endfor %}
+					{% endfor %}
+				</div>
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+
+
+		{% assign index = 1 %}
+		{% assign thumbs = "200,300" | split: ',' %}
+		<ol class="gallery-grids">
+			{% for gallery in galleries %}
+				<li class="gallery-grid-wrapper">
+					<p><a href="{{ gallery.url }}">{{ gallery.data.title }}</a> • {{ gallery.data.date | date: "%b %d, %Y" }}</p>
+					<div class="gallery-grid">
+						{% for image in gallery.data.images %}
+							<button class="gallery-thumb" data-gallery="" data-index="{{index}}">
+								{% image image, null, null, thumbs %}
+							</button>
+							{% assign index = index | plus: 1 %}
+						{% endfor %}
+					</div>
+				</li>
+			
+			{% endfor %}
+		</ol>
+	</div>
+
+</article>

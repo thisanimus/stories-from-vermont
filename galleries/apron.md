@@ -4,15 +4,15 @@ title: Apron
 description: Met a local shopkeeper, and made and apron.
 date: 2022-10-12 10:00:00
 images:
-  - 'galleries/2022-10-12-apron-1.jpg'
-  - 'galleries/2022-10-12-apron-2.jpg'
-  - 'galleries/2022-10-12-apron-3.jpg'
-  - 'galleries/2022-10-12-apron-4.jpg'
-  - 'galleries/2022-10-12-apron-5.jpg'
-  - 'galleries/2022-10-12-apron-6.jpg'
-  - 'galleries/2022-10-12-apron-7.jpg'
-  - 'galleries/2022-10-12-apron-8.jpg'
-  - 'galleries/2022-10-12-apron-9.jpg'
+  - 'photos/2022-10-12-apron-1.jpg'
+  - 'photos/2022-10-12-apron-2.jpg'
+  - 'photos/2022-10-12-apron-3.jpg'
+  - 'photos/2022-10-12-apron-4.jpg'
+  - 'photos/2022-10-12-apron-5.jpg'
+  - 'photos/2022-10-12-apron-6.jpg'
+  - 'photos/2022-10-12-apron-7.jpg'
+  - 'photos/2022-10-12-apron-8.jpg'
+  - 'photos/2022-10-12-apron-9.jpg'
 excerpt: Met a local shopkeeper, and made and apron.
 ---
 

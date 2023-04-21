@@ -5,9 +5,9 @@ description: Golden morning light in the park.
 type: gallery
 date: 2021-10-11
 images:
-  - 'galleries/2021-10-11-taylor-park-fall-1.jpg'
-  - 'galleries/2021-10-11-taylor-park-fall-2.jpg'
-  - 'galleries/2021-10-11-taylor-park-fall-3.jpg'
+  - 'photos/2021-10-11-taylor-park-fall-1.jpg'
+  - 'photos/2021-10-11-taylor-park-fall-2.jpg'
+  - 'photos/2021-10-11-taylor-park-fall-3.jpg'
 excerpt: Golden morning light in the park.
 ---
 
