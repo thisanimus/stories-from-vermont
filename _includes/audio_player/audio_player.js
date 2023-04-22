@@ -6,6 +6,7 @@ export default class AudioPlayer {
 		this.audio.addEventListener(
 			'loadedmetadata',
 			() => {
+				console.log(this.audio.duration);
 				this.audioDuration = this.audioPlayer.querySelector('.duration');
 				this.audioDuration.textContent = this.toTime(this.audio.duration);
 				this.audioControls = this.audioPlayer.querySelector('.audio-controls');

@@ -1,7 +1,7 @@
 {% assign tags = song | id3 %}
 <div class="audio-player">
-	<audio id="audio" preload="metadata"  data-artist="{{ song.artist }}" data-title="{{ song.title }}">
-		<source src="/assets/audio/{{ song }}" />
+	<audio id="audio" preload="none"  data-artist="{{ song.artist }}" data-title="{{ song.title }}">
+		<source src="/assets/audio/{{ song }}" type="audio/mp3" codecs="mp3" />
 	</audio>
 	<div class="audio-controls" data-state="paused">
 		<button class="playpause">
@@ -12,7 +12,7 @@
 		<div class="audio-time">
 			<div class="current">0:00</div>
 			<div class="divider">/</div>
-			<div class="duration"></div>
+			<div class="duration">0:00</div>
 		</div>
 	</div>
 </div>

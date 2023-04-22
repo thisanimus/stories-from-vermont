@@ -5,7 +5,10 @@ const exifr = require('exifr');
 
 const getPhotosByDate = () => {
 	const photoDir = path.resolve(__dirname, '../assets/img/photos');
-	return fs.promises.readdir(photoDir).then((filenames) => {
+	return fs.promises.readdir(photoDir).then((files) => {
+		const filenames = files.filter((el) =>
+			['.jpg', '.JPG', '.jpeg', '.JPEG'].includes(path.extname(el))
+		);
 		const exifPromises = filenames.map((filename) => {
 			return exifr.parse(photoDir + '/' + filename).then((m) => {
 				m.path = `photos/${filename}`;

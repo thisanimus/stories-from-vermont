@@ -43,8 +43,9 @@ async function imageShortcode(src, classes, alt, widths = [600, 900, 1500]) {
 		if (exifAlt !== undefined) {
 			alt = exifAlt.ImageDescription;
 		} else {
+			alt = '';
 			// Throw an error on missing alt (alt="" works okay)
-			throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+			//throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
 		}
 	}
 	let defaultFormat = src.endsWith('.png') ? 'png' : 'jpeg';
@@ -98,8 +99,9 @@ async function galleryImageShortcode(src) {
 	if (exifAlt !== undefined) {
 		alt = exifAlt.ImageDescription;
 	} else {
+		alt = '';
 		// Throw an error on missing alt (alt="" works okay)
-		throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
+		//throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
 	}
 
 	let defaultFormat = src.endsWith('.png') ? 'png' : 'jpeg';
