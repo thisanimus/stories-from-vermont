@@ -41,7 +41,7 @@ scripts: '<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script
     {% for month in year.months %}
       {% for day in month.days %}
       <div class="day">
-        <div id="date-{{year.year}}-{{month.id}}" class="label-month-day">{{ month.name }}, {{ day.date }}</div>
+        <div id="date-{{year.year}}-{{month.id}}" class="label-month-day">{{ month.name }} {{ day.date }}</div>
         <div class="photo-grid">
           {% for photo in day.photos %}
             <button class="gallery-thumb" data-gallery="" data-index="{{index}}">
