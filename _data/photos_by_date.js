@@ -6,9 +6,7 @@ const exifr = require('exifr');
 const getPhotosByDate = () => {
 	const photoDir = path.resolve(__dirname, '../assets/img/photos');
 	return fs.promises.readdir(photoDir).then((files) => {
-		const filenames = files.filter((el) =>
-			['.jpg', '.JPG', '.jpeg', '.JPEG'].includes(path.extname(el))
-		);
+		const filenames = files.filter((el) => ['.jpg', '.JPG', '.jpeg', '.JPEG'].includes(path.extname(el)));
 		const exifPromises = filenames.map((filename) => {
 			return exifr.parse(photoDir + '/' + filename).then((m) => {
 				m.path = `photos/${filename}`;
@@ -47,13 +45,14 @@ const getPhotosByDate = () => {
 				today.photos.push(photo);
 			});
 
-			years = years.reverse();
+			years = years.sort((a, b) => b.year - a.year);
 			years.forEach((year) => {
 				year.months.sort((a, b) => b.id - a.id);
 				year.months.forEach((month) => {
 					month.days.sort((a, b) => b.date - a.date);
 				});
 			});
+			console.log(years);
 
 			return years;
 		});

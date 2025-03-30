@@ -23,7 +23,7 @@ export default class Gallery {
 		this.thumbs.forEach((thumb) => {
 			thumb.addEventListener('click', (e) => {
 				const i = thumb.dataset.index;
-				this.open(i - 1);
+				this.open(i);
 			});
 		});
 		this.closeButton.addEventListener('click', (e) => {
