@@ -2,7 +2,7 @@
 title: Baby No. 2
 description: Welcome to the world baby No. 2.  You were a month early.  We're so happy to meet you.
 type: gallery
-date: 2022-10-17 10:00:00
+date: 2025-03-29 10:00:00
 images:
   - 'photos/DSC07918.jpg'
   - 'photos/PXL_20250328_011519789.MP.jpg'
