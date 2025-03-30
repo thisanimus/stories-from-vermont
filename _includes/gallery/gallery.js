@@ -1,3 +1,6 @@
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+
 export default class Gallery {
 	constructor(gallery) {
 		this.gallery = gallery;
@@ -12,6 +15,7 @@ export default class Gallery {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			},
+			modules: [Navigation],
 		});
 		this.thumbs = this.gallery.querySelectorAll('.gallery-thumb');
 		this.closeButton = this.gallery.querySelector('.close');
@@ -19,7 +23,7 @@ export default class Gallery {
 		this.thumbs.forEach((thumb) => {
 			thumb.addEventListener('click', (e) => {
 				const i = thumb.dataset.index;
-				this.open(i);
+				this.open(i - 1);
 			});
 		});
 		this.closeButton.addEventListener('click', (e) => {

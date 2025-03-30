@@ -1,3 +1,5 @@
+@use './functions.scss' as *;
+
 :root {
 	--color-ui-light: #eeeae5;
 	--color-ui-medium: #7b8083;
@@ -14,8 +16,8 @@
 	--breakpoint-sm: $breakpoint-sm;
 	--breakpoint-md: $breakpoint-md;
 	--breakpoint-lg: $breakpoint-lg;
-	--font-serif: "Dana Library Hand", "Georgia", "Times New Roman", serif;
-	--font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+	--font-serif: 'Dana Library Hand', 'Georgia', 'Times New Roman', serif;
+	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
 		sans-serif;
 
 	--color-teal: #66aca8;

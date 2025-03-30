@@ -55,8 +55,7 @@ const weather = document.querySelector('.weather');
 if (weather) {
 	fetchJsonData(weatherUrl).then((data) => {
 		let ts = Math.floor(Date.now() / 1000);
-		let now =
-			ts >= data.sys.sunrise && ts <= data.sys.sunset ? 'today' : 'tonight';
+		let now = ts >= data.sys.sunrise && ts <= data.sys.sunset ? 'today' : 'tonight';
 		let temp = parseInt(data.main.temp);
 		let feel;
 		if (temp >= 80) {
@@ -71,9 +70,7 @@ if (weather) {
 			feel = 'really cold';
 		}
 		if (data.weather[0].icon) {
-			fetchTextData(
-				'/assets/img/weather/' + data.weather[0].icon + '.svg'
-			).then((text) => {
+			fetchTextData('/assets/img/weather/' + data.weather[0].icon + '.svg').then((text) => {
 				let markup = `
 					<div class="icon">${text}</div>
 					<div class="temp">${temp}°</div>

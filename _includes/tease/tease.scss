@@ -1,3 +1,5 @@
+@use '../../src/base/functions.scss' as *;
+
 .tease-post {
 	@include sm-and-up {
 		display: flex;

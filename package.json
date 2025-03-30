@@ -25,5 +25,8 @@
 		"rollup": "latest",
 		"rollup-plugin-sourcemaps": "latest",
 		"sass": "latest"
+	},
+	"dependencies": {
+		"swiper": "^11.2.6"
 	}
 }

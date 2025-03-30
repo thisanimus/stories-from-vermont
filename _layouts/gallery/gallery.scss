@@ -1,3 +1,5 @@
+@use '../../src/base/functions.scss' as *;
+
 :root {
 	--swiper-theme-color: var(--color-ui-light);
 	--swiper-navigation-size: 2rem;
@@ -35,7 +37,15 @@
 }
 
 button.gallery-thumb {
-	@extend %clean-button;
+	all: unset;
+	box-sizing: border-box;
+	color: currentColor;
+	display: block;
+	cursor: pointer;
+
+	> * {
+		pointer-events: none;
+	}
 	padding: 0;
 	margin: 0 !important;
 	height: 6rem;
@@ -84,7 +94,15 @@ button.gallery-thumb {
 	opacity: 0;
 
 	button.close {
-		@extend %clean-button;
+		all: unset;
+		box-sizing: border-box;
+		color: currentColor;
+		display: block;
+		cursor: pointer;
+
+		> * {
+			pointer-events: none;
+		}
 
 		text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 		font-size: 2em;

@@ -1,3 +1,5 @@
+@use './functions.scss' as *;
+
 .layout-grid {
 	position: relative;
 	display: grid;

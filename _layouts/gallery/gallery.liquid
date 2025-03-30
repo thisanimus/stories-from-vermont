@@ -1,42 +1,39 @@
 ---
 layout: base/base.liquid
-styles: '<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css"/>'
-scripts: '<script src="/assets/js/components/swiper.min.js"></script>'
 ---
-
 <article class="post-gallery">
-	<div class="gallery-description">
-		<h1>{{title}}</h1>
-		<h2 class="post-date smallcaps">{{ date | date: "%A, %B %d, %Y" | downcase}}</h2>
-		{{ content }}
-	</div>
-	{% if images %}
-	<div class="gallery">
-		<div class="gallery-swiper">
-			<button class="close">꟯<span class="hidden">close gallery</button>
-			<div class="swiper">
-				<!-- Additional required wrapper -->
-				<div class="swiper-wrapper">
-					<!-- Slides -->
-					{% for image in images %}
-						<div class="swiper-slide">
-							{% include 'gallery_image/gallery_image' with image %}
-						</div>
-					{% endfor %}
-				</div>
-				<!-- If we need navigation buttons -->
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-			</div>
-		</div>
-		<div class="gallery-grid">
-			{% assign thumbs = "200,300" | split: ',' %}
-			{% for image in images %}
-				<button class="gallery-thumb" data-gallery="" data-index="{{forloop.index}}">
-					{% image image, null, null, thumbs %}
-				</button>
-			{% endfor %}
-		</div>
-	</div>
-	{% endif %}
+  <div class="gallery-description">
+    <h1>{{ title }}</h1>
+    <h2 class="post-date smallcaps">{{ date | date: '%A, %B %d, %Y' | downcase }}</h2>
+    {{ content }}
+  </div>
+  {% if images %}
+    <div class="gallery">
+      <div class="gallery-swiper">
+        <button class="close">꟯<span class="hidden">close gallery</span></button>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            {% for image in images %}
+              <div class="swiper-slide">
+                {% include 'gallery_image/gallery_image' with image %}
+              </div>
+            {% endfor %}
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="gallery-grid">
+        {% assign thumbs = '200,300' | split: ',' %}
+        {% for image in images %}
+          <button class="gallery-thumb" data-gallery="" data-index="{{forloop.index}}">
+            {% image image, null, null, thumbs %}
+          </button>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 </article>

@@ -1,3 +1,5 @@
+@use '../../src/base/functions.scss' as *;
+
 .footer-content {
 	@include sm-and-up {
 		display: flex;

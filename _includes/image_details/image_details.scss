@@ -22,7 +22,15 @@
 		font-weight: 800;
 	}
 	button.show-details {
-		@extend %clean-button;
+		all: unset;
+		box-sizing: border-box;
+		color: currentColor;
+		display: block;
+		cursor: pointer;
+
+		> * {
+			pointer-events: none;
+		}
 		opacity: 0.5;
 		height: 2rem;
 		width: 2rem;
