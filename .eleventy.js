@@ -30,7 +30,7 @@ function convertShutter(decimal) {
 }
 
 async function imageShortcode(src, classes, alt, widths = [600, 900, 1500]) {
-	let sizes = '(min-width: 1024px) 100vw, 50vw';
+	let sizes = '100vw';
 	let srcPrefix = `./assets/img/`;
 	src = srcPrefix + src;
 
@@ -70,9 +70,7 @@ async function imageShortcode(src, classes, alt, widths = [600, 900, 1500]) {
 	return `<picture ${pictureClass}>
 	  ${Object.values(metadata)
 			.map((imageFormat) => {
-				return `  <source type="${
-					imageFormat[0].sourceType
-				}" srcset="${imageFormat
+				return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat
 					.map((entry) => entry.srcset)
 					.join(', ')}" sizes="${sizes}">`;
 			})
