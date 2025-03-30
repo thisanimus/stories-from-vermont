@@ -52,7 +52,6 @@ const getPhotosByDate = () => {
 					month.days.sort((a, b) => b.date - a.date);
 				});
 			});
-			console.log(years);
 
 			return years;
 		});
